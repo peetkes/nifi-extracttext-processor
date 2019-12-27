@@ -19,7 +19,7 @@
     <parent>
         <groupId>com.dataflowdeveloper</groupId>
         <artifactId>extracttext-processor</artifactId>
-        <version>1.8.0</version>
+        <version>1.10.0</version>
     </parent>
 
     <artifactId>nifi-extracttext-processors</artifactId>
