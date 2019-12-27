@@ -19,17 +19,64 @@
     <parent>
         <groupId>org.apache.nifi</groupId>
         <artifactId>nifi-nar-bundles</artifactId>
-        <version>1.5.0</version>
+        <version>1.8.0</version>
     </parent>
 
     <groupId>com.dataflowdeveloper</groupId>
     <artifactId>extracttext-processor</artifactId>
-    <version>1.5</version>
+    <version>1.8.0</version>
     <packaging>pom</packaging>
 
     <modules>
         <module>nifi-extracttext-processors</module>
         <module>nifi-extracttext-nar</module>
     </modules>
+
+    <properties>
+        <nifi.version>1.8.0</nifi.version>
+    </properties>
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.apache.nifi</groupId>
+                <artifactId>nifi-standard-processors</artifactId>
+                <version>${nifi.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.nifi</groupId>
+                <artifactId>nifi-expression-language</artifactId>
+                <version>${nifi.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.nifi</groupId>
+                <artifactId>nifi-standard-reporting-tasks</artifactId>
+                <version>${nifi.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.nifi</groupId>
+                <artifactId>nifi-standard-content-viewer</artifactId>
+                <type>war</type>
+                <version>${nifi.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.nifi</groupId>
+                <artifactId>nifi-jolt-transform-json-ui</artifactId>
+                <type>war</type>
+                <version>${nifi.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-surefire-plugin</artifactId>
+                    <version>2.22.2</version>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
 
 </project>
