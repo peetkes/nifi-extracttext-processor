@@ -61,8 +61,8 @@ import org.apache.tika.parser.AutoDetectParser;
 import org.apache.tika.sax.ExpandedTitleContentHandler;
 import org.xml.sax.SAXException;
 
-@Tags({ "extracttextprocessortika" })
-@CapabilityDescription("Run Apache Tika Text Extraction from PDF, Word, Excel.   Parameter for HTML or TEXT output.  Parameter for Maximum Length returned.")
+@Tags({ "extracttext","tika","pdf","word","excel","email" })
+@CapabilityDescription("Run Apache Tika Text Extraction from PDF, Word, Excel. Parameter for HTML or TEXT output. Parameter for Maximum Length returned.")
 @SeeAlso({})
 @ReadsAttributes({ @ReadsAttribute(attribute = "", description = "") })
 @WritesAttributes({ @WritesAttribute(attribute = "", description = "") })
